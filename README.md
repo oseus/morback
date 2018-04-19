@@ -1,6 +1,6 @@
-## README DE BASE DU SEUL GROUPE THP SESSION4 #LYON
+## README THP_CODE4#LYON
 # DAY 12
-Hello et bienvenue sur notre github, excellent correction !
+Hello et bienvenue sur githoub, excellente correction !
 
 Theme de jour : Faire un morpion (simple sur le papier, cass c@#{~# en pratique...)
 
