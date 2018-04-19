@@ -114,10 +114,11 @@ class Board
 end
 
 class Player
+	#la classe a 2 attr_accessor, son nom, sa valeur (X ou O). Elle a un attr_writer : il a gagné ?
 	attr_accessor :name, :value
-	attr_writer :he_won
+	attr_writer :il_a_gagne
 
-	def initialize(name, value)		# <= Initilaise les joueurs.
+	def initialize(name, value)
 		@name = name
 		@value = value
 	end
@@ -126,8 +127,8 @@ end
 
 class Game
 	attr_accessor :joueur
-
-	def initialize		# <= Initialise la partie.
+	# On démarre la partie, tableau de préz des combinaisons et un petit mot d'encouragement
+	def initialize
 		@joueur = joueur
 		puts "T__tic__H__tac__P__toe__Team_Lyon06!"
 		puts "Jouez les positions comme suit:"
@@ -142,6 +143,7 @@ class Game
 		joueur1 = gets.chomp
 		puts "Hello l'adversaire(courage le challenger!), quel est ton pseudo ?"
 		joueur2 = gets.chomp
+		# On appelle nos classes Joueurs et Board on crée 2 joueurs, on crée un board
 		@joueur1 = Player.new(joueur1, "X")
 		@joueur2 = Player.new(joueur2, "O")
 		@nouveau_plateau = Board.new
@@ -152,7 +154,8 @@ class Game
 	end
 
 	def turn
-		while (true)		# <= Continu le jeu tant que les conditions d'arret plus haut dans le code ne sont pas respecter.
+		# On affiche le plateau, demande au joueur il joue quoi, vérifie si un joueur a gagné, passe au joueur suivant
+		while (true)
 			@nouveau_plateau.display
 			puts "#{@joueur1.name} honneur au chanceux, ton choix ?"
 			@nouveau_plateau.play(@joueur1)
@@ -163,5 +166,5 @@ class Game
 	end
 
 end
-
-Game.new.go		#
+# On balance la game
+Game.new.go
