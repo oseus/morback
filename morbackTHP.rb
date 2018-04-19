@@ -76,34 +76,34 @@ class Board
 	end
 	# On range ici les combinaisons gagnantes par array
 	def victory(joueur)
-
+		# On définit les 8 possibilités de victoires si elles se vérifient les 3 dans la combinaison donnée alors la partie s'arrête
 		if (plateau[0] == joueur.value) && (plateau[1] == joueur.value) && (plateau[2] == joueur.value)
-			puts "#{joueur.name} a gagné la partie."
-			display		# <= Pour réaficher le tableau.
-			exit		# <= Pour quitté le jeu si la condition est vrai et qu'un joueur a gagné
+			puts "#{joueur.name} a eu plus de chance que toi ¯\_(ツ)_/¯"
+			display
+			exit
 
 		elsif (plateau[3] == joueur.value) && (plateau[4] == joueur.value) && (plateau[5] == joueur.value)
-			puts "#{joueur.name} a gagné la partie."
+			puts "#{joueur.name} a eu plus de chance que toi ¯\_(ツ)_/¯"
 			display
 			exit
 		elsif (plateau[0] == joueur.value) && (plateau[3] == joueur.value) && (plateau[6] == joueur.value)
-			puts "#{joueur.name} a gagné la partie."
+			puts "#{joueur.name} a eu plus de chance que toi ¯\_(ツ)_/¯"
 			display
 			exit
 		elsif (plateau[2] == joueur.value) && (plateau[4] == joueur.value) && (plateau[6] == joueur.value)
-			puts "#{joueur.name} a gagné la partie."
+			puts "#{joueur.name} a eu plus de chance que toi ¯\_(ツ)_/¯"
 			display
 			exit
 		elsif (plateau[0] == joueur.value) && (plateau[4] == joueur.value) && (plateau[8] == joueur.value)
-			puts "#{joueur.name} a gagné la partie."
+			puts "#{joueur.name} a eu plus de chance que toi ¯\_(ツ)_/¯"
 			display
 			exit
 		elsif (plateau[2] == joueur.value) && (plateau[5] == joueur.value) && (plateau[8] == joueur.value)
-			puts "#{joueur.name} a gagné la partie."
+			puts "#{joueur.name} a eu plus de chance que toi ¯\_(ツ)_/¯"
 			display
 			exit
 		elsif (plateau[1] == joueur.value) && (plateau[4] == joueur.value) && (plateau[7] == joueur.value)
-			puts "#{joueur.name} a gagné la partie."
+			puts "#{joueur.name} a eu plus de chance que toi ¯\_(ツ)_/¯"
 			display
 			exit
 		else
